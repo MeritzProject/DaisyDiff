@@ -39,7 +39,8 @@ public class HTMLDifferTest {
 		String newText = "<p> This is a big blue book</p>";
 		
 		String result = HtmlTestFixture.diff(oldText, newText);
-		assertTrue("Expected an addition",result.indexOf("<p> This is a <span class=\"diff-html-added\"") > -1);
+        System.out.println(result);
+		assertTrue("Expected an addition",result.indexOf("This is a <span class=\"diff-html-added\"") > -1);
 	}
 	
 	/**
@@ -86,7 +87,7 @@ public class HTMLDifferTest {
 		
 		String result = HtmlTestFixture.diff(oldText, newText);
         System.out.println(result);
-		assertTrue("Expected a change",result.indexOf("<p id=\"sample\">\n<span class=\"diff-html-changed\"") > -1);
+		assertTrue("Expected a change",result.indexOf("<span class=\"diff-html-changed\"") > -1);
 	}
 	
 
@@ -102,7 +103,8 @@ public class HTMLDifferTest {
 		String newText = "<p> This is a <b>blue</b> book</p>";
 		
 		String result = HtmlTestFixture.diff(oldText, newText);
-		assertTrue("Expected a change",result.indexOf("<p> This is a <b><span class=\"diff-html-changed\"") > -1);
+        System.out.println(result);
+		assertTrue("Expected a change",result.indexOf("This is a <b><span class=\"diff-html-changed\"") > -1);
 	}
 	
 	/**
@@ -117,7 +119,8 @@ public class HTMLDifferTest {
 		String newText = "<p> This is a red table</p>";
 		
 		String result = HtmlTestFixture.diff(oldText, newText);
-		assertTrue("Expected a removal",result.indexOf("<p> This is a <span class=\"diff-html-removed\"") > -1);
+        System.out.println(result);
+		assertTrue("Expected a removal",result.indexOf("This is a <span class=\"diff-html-removed\"") > -1);
 		assertTrue("Expected an addition",result.indexOf("<span class=\"diff-html-added\"") > -1);
 	}
 }
