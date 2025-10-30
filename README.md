@@ -1,3 +1,11 @@
+# Fork of DaisyDiff
+
+## Modification
+- Java 1.6 --> Java 8 
+- .gitignore 
+
+
+------------------------
 This is a maintenance project of DaisyDiff in Java. The initial commit is a checkout of version 1.2 of [old DaisyDiff project](https://code.google.com/archive/p/daisydiff).
 
 For more documentation see [daisydiff.github.io](https://daisydiff.github.io/).
