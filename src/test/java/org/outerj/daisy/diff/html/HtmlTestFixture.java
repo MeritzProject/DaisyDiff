@@ -63,7 +63,7 @@ public class HtmlTestFixture {
 
 		TransformerHandler result = tf.newTransformerHandler();
         result.getTransformer().setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
-        result.getTransformer().setOutputProperty(OutputKeys.INDENT, "yes");
+        result.getTransformer().setOutputProperty(OutputKeys.INDENT, "yes");   // 원래 yes
         result.getTransformer().setOutputProperty(OutputKeys.METHOD, "html");
         result.getTransformer().setOutputProperty(OutputKeys.ENCODING, TestHelper.ENCODING);
         result.setResult(new StreamResult(finalResult));
